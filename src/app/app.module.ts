@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { ViewbooksComponent } from './viewbooks/viewbooks.component';
 import { HttpClientModule} from "@angular/common/http";
-import { AddBookComponent } from './add-book/add-book.component';
 
 
 @NgModule({
@@ -14,7 +13,6 @@ import { AddBookComponent } from './add-book/add-book.component';
     AppComponent,
     AddbookComponent,
     ViewbooksComponent,
-    AddBookComponent
 
   ],
   imports: [

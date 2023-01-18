@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Book} from "./book";
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,8 @@ export class BookstoreService{
   getBooksFromServer():Observable<any>{
     return this._http.get<any>("http://localhost:8080/bookstore")
   }
-  addBookFormSubmit():Observable<any>{
-    return this._http.post("http://localhost:8080/bookstore", "any")
+
+  addBookToServer(book: Book):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/bookstore", book)
   }
 }
