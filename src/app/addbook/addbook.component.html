@@ -18,6 +18,6 @@
       <label for="price">Price:</label>
       <input type="text" id="price" class="form-control" required[(ngModel)]="book.price" name="price">
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" (click)="addBookFormSubmit()">Submit</button>
   </form>
 </div>

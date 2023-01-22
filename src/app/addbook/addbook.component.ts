@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {Book} from "../book";
 import {BookstoreService} from "../bookstore.service";
 import {NgForm} from "@angular/forms";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-addbook',
@@ -12,13 +13,13 @@ import {NgForm} from "@angular/forms";
 })
 export class AddbookComponent implements OnInit{
   book: Book = new Book();
-  constructor(private _service: BookstoreService, private _route:Router) { }
+  constructor(private service: BookstoreService, private route:Router) { }
 
 
 
   public addBookFormSubmit(){
-  this._service.addBookToServer(this.book).subscribe();
-  this._route.navigate(['/viewbooks']);
+    this.service.addBookToServer(this.book).subscribe();
+  this.route.navigate(['/viewbooks']);
   }
 
   ngOnInit(): void {

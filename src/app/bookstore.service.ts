@@ -6,13 +6,14 @@ import {Book} from "./book";
   providedIn: 'root'
 })
 export class BookstoreService{
-  constructor(private _http:HttpClient) {
+  constructor(private http:HttpClient) {
   }
   getBooksFromServer():Observable<any>{
-    return this._http.get<any>("http://localhost:8080/bookstore")
+    return this.http.get<any>("http://localhost:8080/bookstore")
+
   }
 
   addBookToServer(book: Book):Observable<any>{
-    return this._http.post<any>("http://localhost:8080/bookstore", book)
+    return this.http.post<any>("http://localhost:8080/bookstore", book)
   }
 }

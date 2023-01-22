@@ -12,17 +12,18 @@ import {BookstoreService} from "../bookstore.service";
 export class ViewbooksComponent implements OnInit {
   books: Array<Book> = [];
 
-  constructor(private _service: BookstoreService, private _route:Router) {
+  constructor(private service: BookstoreService, private route:Router) {
   }
   ngOnInit(): void {
     this.getbooks();
   }
   getbooks(){
-    this._service.getBooksFromServer().subscribe(
+    this.service.getBooksFromServer().subscribe(
       data => this.books =data,
     )
   }
+
   RedirectToAddBook(){
-    this._route.navigate(['/addbook'])
+    this.route.navigate(['/addbook',]);
   }
 }
