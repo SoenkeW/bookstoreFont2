@@ -10,10 +10,8 @@ describe('ViewbooksComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ViewbooksComponent ]
     })
-    .compileComponents();
-  });
+      .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ViewbooksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

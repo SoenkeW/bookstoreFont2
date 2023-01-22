@@ -10,10 +10,8 @@ describe('AddbookComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AddbookComponent ]
     })
-    .compileComponents();
-  });
+      .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(AddbookComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

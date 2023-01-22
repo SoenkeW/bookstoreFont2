@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { ViewbooksComponent } from './viewbooks/viewbooks.component';
 import { HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
